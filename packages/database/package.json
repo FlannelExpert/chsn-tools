@@ -1,0 +1,33 @@
+{
+  "name": "@repo/database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "db:seed": "tsx scripts/seed.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "generate": "drizzle-kit generate:pg"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@libsql/client": "^0.12.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0"
+  },
+  "devDependencies": {
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
+    "drizzle-kit": "^0.24.2",
+    "eslint": "^8.57.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.3.3"
+  }
+}

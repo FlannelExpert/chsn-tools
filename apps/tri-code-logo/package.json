@@ -1,0 +1,24 @@
+{
+  "name": "tri-code-logo",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "wrangler pages dev",
+    "deploy": "$npm_execpath run build && wrangler pages deploy"
+  },
+  "dependencies": {
+    "color2k": "^2.0.3",
+    "hono": "^4.6.2",
+    "satori": "^0.11.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "@hono/vite-build": "^1.0.0",
+    "@hono/vite-dev-server": "^0.15.1",
+    "@repo/config-eslint": "workspace:*",
+    "@repo/database": "workspace:*",
+    "vite": "^5.2.12",
+    "wrangler": "^3.57.2"
+  }
+}
